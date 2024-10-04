@@ -8,6 +8,7 @@ function setup() {
     arrow1 = new Arrow(createVector(50, 200), createVector(200, 200));
     arrow2 = new Arrow(createVector(200, 200), createVector(350, 200));
     composedArrow = arrow1.compose(arrow2);
+    log("Hello World2");
 }
 
 // p5.js draw function
