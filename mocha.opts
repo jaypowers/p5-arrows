@@ -1,0 +1,11 @@
+-- mocha.opts --
+```
+--recursive
+--timeout 5000
+--reporter spec
+--require ts-node/register
+--require test/setup.js
+test/**/*.test.js
+```
+
+Is there anything else I can help you with?
