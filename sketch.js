@@ -1,14 +1,13 @@
 // p5.js setup function
 let arrow1, arrow2;
 let composedArrow;
-let test;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
     arrow1 = new Arrow(createVector(50, 200), createVector(200, 200));
     arrow2 = new Arrow(createVector(200, 200), createVector(350, 200));
     composedArrow = arrow1.compose(arrow2);
-    log("Hello World2");
+    console.log("Hello World2");
 }
 
 // p5.js draw function
@@ -20,8 +19,7 @@ function draw() {
   arrow2.display();
   composedArrow.display();
 
-  // my_test.js
-  log("Hello from my_test.js!");
+  console.log("Hello from my_test.js!");
   
   // No continuous drawing needed
   noLoop();
