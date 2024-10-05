@@ -4,29 +4,28 @@
 
 // Arrow constructor
 function Arrow(start, end) {
-    this.start = start;
-    this.end = end;
+  this.start = start;
+  this.end = end;
 }
 
 // Method to display the arrow
-Arrow.prototype.display = function() {
-    stroke(0);
-    fill(0);
-    line(this.start.x, this.start.y, this.end.x, this.end.y);
-    let angle = atan2(this.end.y - this.start.y, this.end.x - this.start.x);
-    push();
-    translate(this.end.x, this.end.y);
-    rotate(angle);
-    triangle(0, 0, -10, 5, -10, -5);
-    pop();
+Arrow.prototype.display = function () {
+  stroke(0);
+  fill(0);
+  line(this.start.x, this.start.y, this.end.x, this.end.y);
+  let angle = atan2(this.end.y - this.start.y, this.end.x - this.start.x);
+  push();
+  translate(this.end.x, this.end.y);
+  rotate(angle);
+  triangle(0, 0, -10, 5, -10, -5);
+  pop();
 };
 
 // Method to compose two arrows
-Arrow.prototype.compose = function(other) {
-    if (this.end.x === other.start.x && this.end.y === other.start.y) {
-        return new Arrow(this.start, other.end);
-    } else {
-        throw new Error("Arrows cannot be composed");
-    }
+Arrow.prototype.compose = function (other) {
+  if (this.end.x === other.start.x && this.end.y === other.start.y) {
+    return new Arrow(this.start, other.end);
+  } else {
+    throw new Error("Arrows cannot be composed");
+  }
 };
-

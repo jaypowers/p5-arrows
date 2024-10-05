@@ -1,5 +1,8 @@
 // my_test.js
 
+// testing the log function
+log("Hello from my_test.js!");
+
 // create a simple loging system for me, the developer
 function log(message) {
     console.log(message);

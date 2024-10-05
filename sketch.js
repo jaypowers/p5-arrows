@@ -20,10 +20,7 @@ function draw() {
   composedArrow.display();
 
   // my_test.js
-
-  // create a new test object
-  test = new Test('Equality test');
-  test.test(1, 1);  // Test passed!
+  log("Hello from my_test.js!");
   
   // No continuous drawing needed
   noLoop();
