@@ -1,5 +1,7 @@
 // my_test.js
 
+log("Hello World");
+
 // testing the log function
 log("Hello from my_test.js!");
 
